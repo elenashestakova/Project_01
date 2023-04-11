@@ -15,3 +15,16 @@
 
     # Введите номер месяца: 15
     # Такого месяца нет!
+
+
+def counts_the_days(month):
+    lst_month_days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+    lst_month = ['январь', 'февраль', 'март', 'апрель', 'май', 'июнь', 'июль',
+                 'август', 'сентябрь', 'октябрь', 'ноябрь', 'декабрь']
+    if 0 < month <= 12:
+        return (f'Вы ввели {lst_month[month - 1]}. {lst_month_days[month - 1]} дней')
+    else:
+        return('Такого месяца нет!')
+
+month_num = int(input('Введите номер месяца: '))
+print(counts_the_days(month_num))
