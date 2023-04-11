@@ -20,7 +20,7 @@ my_favorite_songs = [
 import random
 
 song_duration = [my_favorite_songs[i][1] for i in range(len(my_favorite_songs))]
-sum_random_duration = sum(random.sample(song_duration, 3))
+sum_random_duration = int(sum(random.sample(song_duration, 3)))
 
 print(f'Три песни звучат {sum_random_duration} минут')
 
@@ -44,12 +44,22 @@ my_favorite_songs_dict = {
     'In This World': 4.02,
 }
 
+second_song_duration = list(my_favorite_songs_dict.values())
+second_sum_random_duration = int(sum(random.sample(second_song_duration, 3)))
+print(f'Три песни звучат {second_sum_random_duration} минут')
+
 # Дополнительно для пунктов A и B
 # Пункт C.
 # Сгенерируйте случайные песни с помощью модуля random
-# import random
+
+import random
+song_names = [my_favorite_songs[i][0] for i in range(len(my_favorite_songs))]
+random.shuffle(song_names)
+print(*song_names, sep=', ')
 
 # Дополнительно 
 # Пункт D.
 # Переведите минуты и секунды в формат времени. Используйте модуль datetime 
+
+import datetime
 
