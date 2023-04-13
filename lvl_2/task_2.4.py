@@ -8,7 +8,11 @@
 # foo("Oh, no!!!") -> "Oh, no"
 
 def remove_exclamation_marks(s):
-    pass
+    new_s = s.replace("!", "")
+    return new_s
+
+str = input('Введите строку: ')
+print(remove_exclamation_marks(str))
 
 
 # Пункт B.
@@ -18,7 +22,15 @@ def remove_exclamation_marks(s):
 # remove("!Hi") == "!Hi"
 
 def remove_last_em(s):
-    pass
+    if s[-1] == "!":
+        new_s = s[:-1]
+    else:
+        new_s = s
+    return new_s
+
+
+str = input('Введите строку: ')
+print(remove_last_em(str))
 
 
 # Дополнительно
@@ -34,6 +46,9 @@ def remove_last_em(s):
 # remove("Hi! !Hi Hi!") === ""
 # remove("Hi! Hi!! Hi!") === "Hi!!"
 # remove("Hi! !Hi! Hi!") === "!Hi!"
-
 def remove_word_with_one_em(s):
-    pass
+    return ' '.join(i for i in s.split() if list(i).count('!') != 1)
+
+
+str = input('Введите строку: ')
+print(remove_word_with_one_em(str))
