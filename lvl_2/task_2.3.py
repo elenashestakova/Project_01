@@ -8,4 +8,10 @@
 # Использовать условный оператор if-elif-else нельзя!
 
 def switch_it_up(number):
-    pass
+    try:
+        digits_words = ["Zero", "One","Two","Three","Four","Five","Six","Seven","Eight","Nine"]
+        return digits_words[number]
+    except
+
+num = int(input('Введите цифру от 0 до 9: '))
+print(switch_it_up(num))
