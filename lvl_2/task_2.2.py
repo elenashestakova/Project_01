@@ -7,4 +7,13 @@
 # месяц 11 (ноябрь) является частью четвертого квартала.
 
 def quarter_of(month):
-    pass
+    lst_month = ['январь', 'февраль', 'март', 'апрель', 'май', 'июнь', 'июль',
+                 'август', 'сентябрь', 'октябрь', 'ноябрь', 'декабрь']
+    for i in range(1, 13):
+        quarter = month // 4 + 1
+    return quarter
+
+
+
+month_num = int(input("Введите номер месяца: "))
+print(quarter_of(month_num))
