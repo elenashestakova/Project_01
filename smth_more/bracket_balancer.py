@@ -29,7 +29,6 @@ def check_brackets(text):
     return count == 0
 
 
-
 s = input('Введите строку круглых скобок: ')
 print(check_brackets(s))
 
@@ -42,3 +41,10 @@ print(check_brackets(s))
 #   string = 'hi())('       ->  false
 #   string = '((())()())'   ->  true
 
+def check_brackets_text(text):
+    result_s = ' '.join([i for i in text if i == '(' or i ==')'])
+    return check_brackets(result_s)
+
+
+s = input('Введите строку круглых скобок с текстом: ')
+print(check_brackets_text(s))
