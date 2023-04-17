@@ -22,7 +22,7 @@ import random
 song_duration = [my_favorite_songs[i][1] for i in range(len(my_favorite_songs))]
 sum_random_duration = sum(random.sample(song_duration, 3))
 
-print(f'Три песни звучат {round(sum_random_duration, 2)} минут')
+print(f'Три песни звучат {sum_random_duration} минут')
 
 
 
@@ -45,8 +45,8 @@ my_favorite_songs_dict = {
 }
 
 second_song_duration = list(my_favorite_songs_dict.values())
-second_sum_random_duration = int(sum(random.sample(second_song_duration, 3)))
-print(f'Три песни звучат {round(second_sum_random_duration, 2)} минут')
+second_sum_random_duration = sum(random.sample(second_song_duration, 3))
+print(f'Три песни звучат {second_sum_random_duration} минут')
 
 # Дополнительно для пунктов A и B
 # Пункт C.
@@ -63,4 +63,7 @@ print(*song_names, sep=', ')
 
 import datetime
 
-print(datetime.timedelta(second_song_duration[1]))
+duration_in_sec = second_sum_random_duration * 60
+dur_sec_lst = datetime.timedelta(seconds=duration_in_sec)
+
+print(f'Три песни звучат {dur_sec_lst}')
