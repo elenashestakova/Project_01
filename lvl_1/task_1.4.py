@@ -30,3 +30,9 @@ store = {
 
 # Пример: "Кроссовки тип 3 (Adidas) - 31 шт, стоимость 50747 руб"
 
+s = 0
+
+for i in titles:
+    for j in store[titles[i]]:
+        s += j["quantity"] * j["price"]
+    print(f'{i} - {j["quantity"]} шт., стоимость {s}')
