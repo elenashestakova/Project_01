@@ -64,6 +64,6 @@ print(*song_names, sep=', ')
 import datetime
 
 duration_in_sec = second_sum_random_duration * 60
-dur_sec_lst = datetime.timedelta(seconds=duration_in_sec)
+dur_format_dt = datetime.timedelta(seconds=duration_in_sec)
 
-print(f'Три песни звучат {dur_sec_lst}')
+print(f'Три песни звучат {dur_format_dt}')
