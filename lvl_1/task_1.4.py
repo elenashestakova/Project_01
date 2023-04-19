@@ -33,12 +33,12 @@ store = {
 for i in titles:
     quantity = 0
     price = 0
-    total_sum = 0
-    quantity_total = 0
+    total_cost = 0
+    total_quantity = 0
     for k in range(len(store[titles[i]])):
         quantity = store[titles[i]][k]["quantity"]
         price = store[titles[i]][k]["price"]
 
-        total_sum += quantity * price
-        quantity_total += quantity
-    print(f'{i} - {quantity_total} шт., стоимость {total_sum}')
+        total_cost += quantity * price
+        total_quantity += quantity
+    print(f'{i} - {total_quantity} шт., стоимость {total_cost}')
