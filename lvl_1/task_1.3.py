@@ -51,7 +51,7 @@ def counts_the_days(month):
     if 0 < month < 13:
         return (f'Вы ввели {num[month]}. {month_days[num[month]]} дней')
     else:
-        return('Такого месяца нет!')5
+        return('Такого месяца нет!')
 
 month_num = int(input('Введите номер месяца: '))
 print(counts_the_days(month_num))
