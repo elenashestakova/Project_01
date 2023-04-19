@@ -11,19 +11,29 @@
 # функции sorted, max и min использовать нельзя!
 
 def minimum(arr):
-    min_elem = arr[0]
-    for i in arr:
-        if i < min_elem:
-            min_elem = i
-    return min_elem
+    arr = arr.lstrip('[').rstrip(']')
+    if len(arr) == 1:
+        return int(arr)
+    else:
+        arr = [int(i) for i in arr.split(',')]
+        min_elem = arr[0]
+        for i in arr:
+            if i < min_elem:
+                min_elem = i
+        return min_elem
 
 def maximum(arr):
-    max_elem = arr[0]
-    for i in arr:
-        if i > max_elem:
-            max_elem = i
-    return max_elem
+    arr = arr.lstrip('[').rstrip(']')
+    if len(arr) == 1:
+        return int(arr)
+    else:
+        arr = [int(i) for i in arr.split(',')]
+        max_elem = arr[0]
+        for i in arr:
+            if i > max_elem:
+                max_elem = i
+        return max_elem
 
-lst = [int(i) for i in (input('Введите список целых чисел: ').lstrip('[').rstrip(']').split(','))]
+lst = input('Введите список целых чисел: ')
 print(minimum(lst))
 print(maximum(lst))
