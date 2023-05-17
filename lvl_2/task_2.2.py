@@ -9,8 +9,8 @@
 def quarter_of(month):
     lst_month = ['январь', 'февраль', 'март', 'апрель', 'май', 'июнь', 'июль',
                  'август', 'сентябрь', 'октябрь', 'ноябрь', 'декабрь']
-    for i in range(1, 13):
-        quarter = month // 4 + 1
+
+    quarter = month // 4 + 1
 
     quarter_ordinal = ['первого', 'второго', 'третьего', 'четвертого']
     return f'месяц {month} ({lst_month[month - 1]}) является частью {quarter_ordinal[quarter - 1]} квартала'
