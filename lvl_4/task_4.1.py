@@ -22,7 +22,6 @@
 # Название школы:
 
 import sqlite3
-
 def get_connection():
     connection = sqlite3.connect('teachers.db')
     return connection
@@ -30,7 +29,6 @@ def get_connection():
 def close_connection(connection):
     if connection:
         connection.close()
-
 
 # Содание таблицы Students в базе данных teachers
 
@@ -81,4 +79,4 @@ def get_info_about_stud_school(student_id):
         print("Ошибка в подключении данных: ", error)
 
 # Запускаем функцию с указанием ID студента
-get_info_about_stud_school(201)
+get_info_about_stud_school(202)
